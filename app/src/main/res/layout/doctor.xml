@@ -114,7 +114,6 @@
         android:drawablePadding="10dp"
         android:ems="10"
         android:hint="*******"
-        android:inputType="text"
         android:paddingLeft="15dp"
         android:paddingTop="10dp"
         android:paddingRight="10dp"
@@ -122,6 +121,7 @@
         android:textColor="@color/black"
         android:textColorHint="#717171"
         android:textSize="21sp"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="@+id/inputEmail12"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/inputEmail12"
@@ -159,5 +159,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:clickable="true"/>
+
+    <TextView
+        android:id="@+id/GoLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#0337F4"
+        android:layout_marginTop="12dp"
+        android:contextClickable="true"
+        android:text="Go To Login"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/btnlogin12"
+        app:layout_constraintStart_toStartOf="@+id/btnlogin12"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

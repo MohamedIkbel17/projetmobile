@@ -13,17 +13,20 @@
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
         <activity
+            android:name=".UserScreen"
+            android:exported="false" />
+        <activity
             android:name=".Patient"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Accompagnateur"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Doctor"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".Connect"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -34,4 +37,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

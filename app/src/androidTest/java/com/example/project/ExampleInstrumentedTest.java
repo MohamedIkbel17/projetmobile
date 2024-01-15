@@ -1,5 +1,7 @@
 package com.example.project;
 
+import androidx.room.Entity;
+
 import android.content.Context;
 
 import androidx.test.platform.app.InstrumentationRegistry;
