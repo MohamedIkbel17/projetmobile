@@ -1,19 +1,14 @@
 package com.example.project;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.project.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
     /*ActivityMainBinding binding;
@@ -59,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
                                 });
                             }else {
                                 String name = userEntity.name;
-                                startActivity(new Intent(MainActivity.this, UserScreen.class)
+                                startActivity(new Intent(MainActivity.this, DoctorScreen.class)
                                         .putExtra("name",name));
                             }
                         }
