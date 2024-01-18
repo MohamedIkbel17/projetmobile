@@ -7,7 +7,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.room.SQLiteCopyOpenHelper;
 
-@Database(entities = {UserEntity.class},version = 1)
+@Database(entities = {UserEntity.class},version = 2)
 public abstract class UserDatabase extends RoomDatabase {
     private static final String dbName = "user";
     private static UserDatabase userDatabase;

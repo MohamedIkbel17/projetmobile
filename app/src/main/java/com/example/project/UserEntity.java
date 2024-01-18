@@ -19,6 +19,9 @@ public class UserEntity {
     @ColumnInfo(name = "password")
     String password;
 
+    @ColumnInfo(name = "type")
+    Integer type;
+
     /*public UserEntity(Integer o, String email, String password, String name){
     }*/
 
@@ -28,6 +31,13 @@ public class UserEntity {
         this.password = password;
         this.name = name;
     }*/
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
+    }
 
     public Integer getId() {
         return id;

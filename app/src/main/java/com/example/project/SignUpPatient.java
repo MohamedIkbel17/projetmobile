@@ -10,36 +10,32 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Doctor extends AppCompatActivity {
-
+public class SignUpPatient extends AppCompatActivity {
     EditText email,password,name;
     Button register;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.doctor);
+        setContentView(R.layout.patient);
 
-        email=findViewById(R.id.inputEmail12);
-        password=findViewById(R.id.inputpassword12);
-        name=findViewById(R.id.name12);
-        register=findViewById(R.id.btnlogin12);
-        TextView btn = findViewById(R.id.textView);
-        TextView btn1 = findViewById(R.id.GoLogin);
+        email=findViewById(R.id.inputEmail13);
+        password=findViewById(R.id.inputpassword13);
+        name=findViewById(R.id.name13);
+        register=findViewById(R.id.btnlogin13);
+        TextView btn = findViewById(R.id.textView3);
+        TextView btn1 = findViewById(R.id.goLoginPatient);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Doctor.this,Connect.class));
+                startActivity(new Intent(SignUpPatient.this, SignUpAs.class));
             }
         });
-
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(Doctor.this,MainActivity.class));
+                startActivity(new Intent(SignUpPatient.this,MainActivity.class));
             }
         });
-
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +44,7 @@ public class Doctor extends AppCompatActivity {
                 userEntity.setEmail(email.getText().toString());
                 userEntity.setPassword(password.getText().toString());
                 userEntity.setName(name.getText().toString());
+                userEntity.setType(1);
                 if (validateInput(userEntity)){
                     //Do insert operation
                     UserDatabase userDatabase = UserDatabase.getUserDatabase(getApplicationContext());
@@ -60,7 +57,7 @@ public class Doctor extends AppCompatActivity {
                             runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    Toast.makeText(getApplicationContext(), "Doctor Registered", Toast.LENGTH_SHORT).show();
+                                    Toast.makeText(getApplicationContext(), "Patient Registered", Toast.LENGTH_SHORT).show();
                                 }
                             });
                         }
@@ -80,6 +77,6 @@ public class Doctor extends AppCompatActivity {
         ){
             return false;
         }
-            return true;
+        return true;
     }
 }

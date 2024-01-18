@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <EditText
+        android:id="@+id/inputEmail2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/input_bg1"
+        android:drawableLeft="@drawable/email1"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="Email@gmail.com"
+        android:inputType="text"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColorHint="#717171"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/login2" />
+
+
+    <EditText
+        android:id="@+id/inputpassword2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/input_bg1"
+        android:drawableLeft="@drawable/icon2"
+        android:drawableRight="@drawable/eye"
+        android:drawablePadding="10dp"
+        android:ems="10"
+        android:hint="******"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="#717171"
+        android:textSize="21sp"
+        app:layout_constraintEnd_toEndOf="@+id/inputEmail2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail2"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail2" />
+
+    <Button
+        android:id="@+id/facebook2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/facebook"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="Continue With Facebook"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/google2"
+        app:layout_constraintStart_toStartOf="@+id/google2"
+        app:layout_constraintTop_toBottomOf="@+id/google2" />
+
+    <TextView
+
+        android:id="@+id/login2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome To CareZone"
+        android:textColor="@color/black"
+        android:textSize="34sp"
+        android:fontFamily="cursive"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050"/>
+
+    <TextView
+        android:id="@+id/slogan_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="Sign In to continue"
+        android:textSize="21dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.105" />
+
+    <Button
+        android:id="@+id/btnlogin2"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:backgroundTint="@color/black"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputpassword2" />
+
+    <Button
+        android:id="@+id/google2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/tinywow_google_plus_37551251"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="Continue With Google"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/inputpassword2"
+        app:layout_constraintStart_toStartOf="@+id/inputpassword2"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin2" />
+
+    <TextView
+        android:id="@+id/email2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="Email"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail2"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail2" />
+
+    <TextView
+        android:id="@+id/password2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="Password"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/inputpassword2"
+        app:layout_constraintStart_toStartOf="@+id/inputpassword2" />
+
+    <Button
+        android:id="@+id/apple1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@drawable/apple"
+        android:drawablePadding="10dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:text="Continue With Apple"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/facebook2"
+        app:layout_constraintStart_toStartOf="@+id/facebook2"
+        app:layout_constraintTop_toBottomOf="@+id/facebook2" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="@+id/btnlogin2"
+        app:layout_constraintStart_toStartOf="@+id/btnlogin2"
+        app:layout_constraintTop_toBottomOf="@+id/btnlogin2">
+
+        <TextView
+            android:id="@+id/l2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New User ? "
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/btnlogin1"
+            app:layout_constraintStart_toStartOf="@+id/btnlogin1"
+            app:layout_constraintTop_toBottomOf="@+id/btnlogin1" />
+
+        <TextView
+            android:id="@+id/sign2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join Us Now"
+            android:textColor="#0337F4"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            android:clickable="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Fg2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Forgot Passsword?"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/inputpassword2"
+        app:layout_constraintTop_toBottomOf="@+id/inputpassword2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

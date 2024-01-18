@@ -13,19 +13,34 @@
         android:theme="@style/Theme.Project"
         tools:targetApi="31">
         <activity
+            android:name=".PatientScreen"
+            android:exported="false"/>
+        <activity
+            android:name=".LoginDoctor"
+            android:exported="false"/>
+        <activity
+            android:name=".LoginPatient"
+            android:exported="false"/>
+        <activity
+            android:name=".ListAppointment"
+            android:exported="false"/>
+        <activity
+            android:name=".Fichier"
+            android:exported="false"/>
+        <activity
+            android:name=".ListPatient"
+            android:exported="false"/>
+        <activity
             android:name=".DoctorScreen"
             android:exported="false" />
         <activity
-            android:name=".Patient"
+            android:name=".SignUpPatient"
             android:exported="false" />
         <activity
-            android:name=".Accompagnateur"
+            android:name=".SignUpDoctor"
             android:exported="false" />
         <activity
-            android:name=".Doctor"
-            android:exported="false" />
-        <activity
-            android:name=".Connect"
+            android:name=".SignUpAs"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

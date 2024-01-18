@@ -1,47 +1,54 @@
 package com.example.project;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class DoctorScreen extends AppCompatActivity {
-    BottomNavigationView bottomNavigationView;
     TextView nameuser;
+    CardView lsp,logout,hm;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doctor_screen);
-        bottomNavigationView = findViewById(R.id.bottomNav);
+        setContentView(R.layout.doctor_screen);
         nameuser = findViewById(R.id.nameuser);
+        lsp = findViewById(R.id.patients);
+        logout = findViewById(R.id.log_out);
+        hm = findViewById(R.id.hm1);
 
         String name = getIntent().getStringExtra("name");
-        nameuser.setText("Welcome "+name);
+        nameuser.setText("Welcome Doctor " + name);
 
-        replaceFragment(new FragmentListPatient(),true);
-        bottomNavigationView.setOnItemSelectedListener(item ->  {
-            int itemId = item.getItemId();
-
-            if (itemId == R.id.list){
-                replaceFragment(new FragmentListPatient(),false);
-            } else if (itemId == R.id.appoinment){
-                replaceFragment(new FragmentListAppointment(),false);
+        lsp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DoctorScreen.this, ListPatient.class));
             }
-            return true;
         });
-    }
-    private void replaceFragment(Fragment fragment, boolean ins){
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        if (ins)
-            fragmentTransaction.add(R.id.frameMain,fragment);
-        else
-            fragmentTransaction.replace(R.id.frameMain,fragment);
-        fragmentTransaction.commit();
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DoctorScreen.this, LoginDoctor.class));
+            }
+        });
+        hm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(DoctorScreen.this, MainActivity.class));
+            }
+        });
     }
 }
