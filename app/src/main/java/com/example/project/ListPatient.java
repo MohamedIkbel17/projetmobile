@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -21,12 +22,14 @@ public class ListPatient extends AppCompatActivity {
     MyDatabaseHelper myDB;
     ArrayList<String> patient_id,patient_nom,patient_prenom,patient_maladie;
     CustomAdapter customAdapter;
+    Button back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_patient);
         recyclerView = findViewById(R.id.listpatient);
         addbutton = findViewById(R.id.floatingActionButton);
+        back = findViewById(R.id.listback);
         addbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,10 +44,26 @@ public class ListPatient extends AppCompatActivity {
 
         storeDataInArrays();
 
-        customAdapter = new CustomAdapter(ListPatient.this, patient_id,patient_nom,patient_prenom,patient_maladie);
+        customAdapter = new CustomAdapter(ListPatient.this, this,patient_id,patient_nom,patient_prenom,patient_maladie);
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager((ListPatient.this)));
+
+        back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ListPatient.this, DoctorScreen.class));
+            }
+        });
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode==1){
+            recreate();
+        }
+    }
+
     void storeDataInArrays(){
         Cursor cursor = myDB.readAllData();
         if (cursor.getCount() == 0){

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:id="@+id/minl">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -39,14 +40,14 @@
                 android:text="Nom"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toTopOf="@+id/patient_prenommm"
+                app:layout_constraintBottom_toTopOf="@+id/patient_prenom"
                 app:layout_constraintStart_toEndOf="@+id/patient_id"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.0"
                 tools:ignore="MissingConstraints" />
 
             <TextView
-                android:id="@+id/patient_prenommm"
+                android:id="@+id/patient_prenom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="191dp"
