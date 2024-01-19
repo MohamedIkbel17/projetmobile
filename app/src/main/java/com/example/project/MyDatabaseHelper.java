@@ -20,7 +20,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     private static final String COLUMN_NOM = "nom";
     private static final String COLUMN_PRENOM = "prenom";
     private static final String COLUMN_MALADIE = "maladie";
-    public MyDatabaseHelper(@Nullable Context context) {
+    MyDatabaseHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
         this.context = context ;
     }
@@ -41,6 +41,24 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS "+ TABLE_NAME);
         onCreate(db);
     }
+    /*public boolean updatePatientData(String id, String nom, String prenom, String maladie) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        // Map the updated data to the database columns
+        contentValues.put("NOM_COLUMN_NAME", nom);
+        contentValues.put("PRENOM_COLUMN_NAME", prenom);
+        contentValues.put("MALADIE_COLUMN_NAME", maladie);
+
+        // Perform the update operation
+        int rowsAffected = db.update(TABLE_NAME, contentValues, "ID_COLUMN_NAME = ?", new String[]{id});
+
+        // Close the database connection
+        db.close();
+
+        // Check if the update was successful
+        return rowsAffected > 0;
+    }*/
     void addPatient(String nom, String prenom, String maladie){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
@@ -63,5 +81,18 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             cursor = db.rawQuery(query,null);
         }
         return cursor;
+    }
+    void updatePatientData(String row_id,String nom,String prenom,String maladie){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues cv = new ContentValues();
+        cv.put(COLUMN_NOM,nom);
+        cv.put(COLUMN_PRENOM,prenom);
+        cv.put(COLUMN_MALADIE,maladie);
+        long r = db.update(TABLE_NAME,cv,"_id=?",new String[]{row_id});
+        if (r==-1)
+            Toast.makeText(context,"Failed",Toast.LENGTH_SHORT).show();
+        else
+            Toast.makeText(context,"Updated succcess",Toast.LENGTH_SHORT).show();
+
     }
 }
