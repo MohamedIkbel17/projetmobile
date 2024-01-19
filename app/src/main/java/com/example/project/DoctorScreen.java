@@ -13,12 +13,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.project.chahine.MainChahine;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class DoctorScreen extends AppCompatActivity {
     TextView nameuser;
-    CardView lsp,logout,hm;
+    CardView lsp,logout,hm,nav;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +28,7 @@ public class DoctorScreen extends AppCompatActivity {
         lsp = findViewById(R.id.patients);
         logout = findViewById(R.id.log_out);
         hm = findViewById(R.id.hm1);
+        nav = findViewById(R.id.navigation);
 
         String name = getIntent().getStringExtra("name");
         nameuser.setText("Welcome Doctor " + name);
@@ -48,6 +50,12 @@ public class DoctorScreen extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(DoctorScreen.this, MainActivity.class));
+            }
+        });
+        nav.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(DoctorScreen.this, MainChahine.class));
             }
         });
     }

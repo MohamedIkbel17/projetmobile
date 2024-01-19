@@ -52,4 +52,9 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     annotationProcessor("androidx.room:room-compiler:2.6.1")
 
+    implementation("com.mapbox.maps:android:9.7.1")
+    implementation("com.mapbox.navigation:android:2.15.2")
+    implementation("com.mapbox.search:mapbox-search-android-ui:1.0.0-rc.6")
+
+
 }
