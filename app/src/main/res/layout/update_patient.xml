@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Fichier"
-    android:orientation="vertical">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/mainLayout">
 
     <TextView
-        android:id="@+id/textViewHeader"
+        android:id="@+id/textViewHeader1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Medical Information"
@@ -23,7 +23,7 @@
         app:boxBackgroundMode="outline">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextNom"
+            android:id="@+id/editTextNom1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Nom"/>
@@ -37,7 +37,7 @@
         app:boxBackgroundMode="outline">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPrenom"
+            android:id="@+id/editTextPrenom1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Prenom"/>
@@ -50,7 +50,7 @@
         app:boxBackgroundMode="outline">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextPoids"
+            android:id="@+id/editTextPoids1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Poids (kg)"
@@ -65,7 +65,7 @@
         app:boxBackgroundMode="outline">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextTaille"
+            android:id="@+id/editTextTaille1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Taille (cm)"
@@ -79,7 +79,7 @@
         app:boxBackgroundMode="outline">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/groupe_sanguin"
+            android:id="@+id/groupe_sanguin1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="groupe_sanguin"/>
@@ -100,14 +100,14 @@
 
     <!-- Maladie Chronique -->
     <RadioGroup
-        android:id="@+id/radioGroupMaladieChronique"
+        android:id="@+id/radioGroupMaladieChronique1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_marginTop="8dp">
 
         <RadioButton
-            android:id="@+id/radioButtonMaladieOui"
+            android:id="@+id/radioButtonMaladieOui1"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:tag="Oui"
@@ -115,7 +115,7 @@
             android:text="Oui"/>
 
         <RadioButton
-            android:id="@+id/radioButtonMaladieNon"
+            android:id="@+id/radioButtonMaladieNon1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -129,7 +129,7 @@
         app:boxBackgroundMode="outline">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/edittextMaladie"
+            android:id="@+id/edittextMaladie1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="maladie"/>
@@ -142,7 +142,7 @@
         app:boxBackgroundMode="outline">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTextProchainRendezVous"
+            android:id="@+id/editTextProchainRendezVous1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Prochain Rendez-vous"
@@ -156,7 +156,7 @@
         app:boxBackgroundMode="outline">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/editTexttimeProchainRendezVous"
+            android:id="@+id/editTexttimeProchainRendezVous1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Prochain heure"
@@ -166,23 +166,24 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/add"
+        android:id="@+id/update"
+        android:layout_gravity="center"
         android:layout_width="400dp"
         android:layout_height="50dp"
-        android:layout_marginTop="15dp"
         android:layout_marginLeft="6dp"
-        android:text="Add"/>
+        android:layout_marginTop="15dp"
+        android:text="Update"
+        android:textSize="20dp" />
+
     <Button
         android:id="@+id/cancel"
         android:layout_width="400dp"
         android:layout_height="50dp"
-        android:layout_marginTop="8dp"
+        android:gravity="center"
         android:layout_marginLeft="6dp"
-        android:text="Cancel" />
-
-
-
-
+        android:layout_marginTop="8dp"
+        android:text="Cancel"
+        android:textSize="20dp" />
 
 
 </LinearLayout>

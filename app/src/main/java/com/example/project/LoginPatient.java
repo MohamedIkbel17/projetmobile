@@ -54,7 +54,7 @@ public class LoginPatient extends AppCompatActivity {
                                 });
                             }else {
                                 String name = userEntity.name;
-                                startActivity(new Intent(LoginPatient.this, DoctorScreen.class)
+                                startActivity(new Intent(LoginPatient.this, PatientScreen.class)
                                         .putExtra("name",name));
                             }
                         }
